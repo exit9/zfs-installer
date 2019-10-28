@@ -325,7 +325,6 @@ function install_zfs_module {
   if [[ ${ZFS_SKIP_LIVE_ZFS_MODULE_INSTALL:-} == "" ]]; then
     echo "zfs-dkms zfs-dkms/note-incompatible-licenses note true" | debconf-set-selections
 
-    add-apt-repository --yes ppa:jonathonf/zfs
     apt install --yes zfs-dkms
 
     systemctl stop zfs-zed
