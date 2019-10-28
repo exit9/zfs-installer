@@ -6,7 +6,7 @@ ZFS installer is shell script program that fully prepares ZFS on a system, and a
 
 ## Requirements and functionality
 
-The program currently supports Ubuntu 18.04 (Bionic). It uses the widespread [jonathonf/zfs PPA](https://launchpad.net/~jonathonf/+archive/ubuntu/zfs) for installing the latest ZFS version (0.8.x), which supports native encryption and trimming (among the other improvements over 0.7).
+The program currently supports Ubuntu 19.10 (Bionic).
 
 EFI boot is required (any modern (2011+) system will do); legacy boot is currently not supported.
 
@@ -32,7 +32,7 @@ The script is in "open beta"; it's been tested on different configurations, but 
 Start an Ubuntu 18.04 (any distro) live CD, then open a terminal and execute:
 
 ```sh
-wget -qO- https://git.io/JelI5 | sudo bash -
+wget -qO- https://github.com/exit9/zfs-installer | sudo bash -
 ```
 
 then follow the instructions.
@@ -42,7 +42,7 @@ then follow the instructions.
 The program supports unattended installation, via environment variables. The program built-in help explains all the options:
 
 ```
-$ wget -qO- https://git.io/JelI5 | bash /dev/stdin --help
+$ wget -qO- https://github.com/exit9/zfs-installer | bash /dev/stdin --help
 Usage: install-zfs.sh [-h|--help]
 
 Sets up and install a ZFS Ubuntu installation.
