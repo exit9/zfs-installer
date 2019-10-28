@@ -529,7 +529,6 @@ function custom_install_operating_system {
 function install_zfs_0.8_packages {
   print_step_info_header
 
-  chroot_execute "add-apt-repository --yes ppa:jonathonf/zfs"
   chroot_execute 'echo "zfs-dkms zfs-dkms/note-incompatible-licenses note true" | debconf-set-selections'
   chroot_execute "apt install --yes zfs-initramfs zfs-dkms grub-efi-amd64-signed shim-signed"
 }
