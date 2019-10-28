@@ -32,7 +32,7 @@ The script is in "open beta"; it's been tested on different configurations, but 
 Start an Ubuntu 18.04 (any distro) live CD, then open a terminal and execute:
 
 ```sh
-wget -qO- https://github.com/exit9/zfs-installer/blob/master/install-zfs.sh | sudo bash -
+wget -qO- https://raw.githubusercontent.com/exit9/zfs-installer/stable/install-zfs.sh | sudo bash -
 ```
 
 then follow the instructions.
@@ -42,7 +42,7 @@ then follow the instructions.
 The program supports unattended installation, via environment variables. The program built-in help explains all the options:
 
 ```
-$ wget -qO- https://github.com/exit9/zfs-installer/blob/master/install-zfs.sh | bash /dev/stdin --help
+$ wget -qO- https://raw.githubusercontent.com/exit9/zfs-installer/stable/install-zfs.sh | bash /dev/stdin --help
 Usage: install-zfs.sh [-h|--help]
 
 Sets up and install a ZFS Ubuntu installation.
