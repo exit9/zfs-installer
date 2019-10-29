@@ -325,7 +325,7 @@ function install_zfs_module {
   if [[ ${ZFS_SKIP_LIVE_ZFS_MODULE_INSTALL:-} == "" ]]; then
     echo "zfs-dkms zfs-dkms/note-incompatible-licenses note true" | debconf-set-selections
 
-    apt install --yes zfs-dkms
+    apt install --yes linux-image-5.3.0-18-generic
 
     systemctl stop zfs-zed
     modprobe -r zfs
@@ -530,7 +530,7 @@ function install_zfs_0.8_packages {
   print_step_info_header
 
   chroot_execute 'echo "zfs-dkms zfs-dkms/note-incompatible-licenses note true" | debconf-set-selections'
-  chroot_execute "apt install --yes zfs-initramfs zfs-dkms grub-efi-amd64-signed shim-signed"
+  chroot_execute "apt install --yes zfs-initramfs linux-image-5.3.0-18-generic grub-efi-amd64-signed shim-signed"
 }
 
 function install_and_configure_bootloader {
